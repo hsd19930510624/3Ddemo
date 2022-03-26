@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-image: url(../images/1.jpg); */
+    background-size: cover;
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 300px auto;
+    transform-style: preserve-3d;
+    animation: move 5s infinite linear;
+    
+}
+.minbox{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+ul{
+    list-style: none;
+}
+.minbox li{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+.minbox li:nth-child(1){
+    background: url(../images/图层\ 1.png);
+    transform: translateZ(100px);
+}
+.minbox li:nth-child(2){
+    background: url(../images/图层\ 2.png);
+    transform: rotateX(180deg) rotateZ(180deg) translateZ(100px);
+}
+.minbox li:nth-child(3){
+    background: url(../images/图层\ 3.png);
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.minbox li:nth-child(4){
+    background: url(../images/图层\ 4.png);
+    transform: rotateX(90deg) translateZ(100px);
+}
+.minbox li:nth-child(5){
+    background: url(../images/图层\ 5.png);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.minbox li:nth-child(6){
+    background: url(../images/图层\ 6.png);
+    transform: rotateY(90deg) translateZ(100px);
+}
+@keyframes move{
+    0%{
+        transform: rotateX(13deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(13deg) rotateY(360deg);
+    }
+}
